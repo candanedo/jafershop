@@ -7,10 +7,10 @@ Things you may want to cover:
 
 * Ruby version 2.5.1
 
-* System dependencies
-	Rails 5.2.1
-	Postgres DB
-	Solidus 
+* System dependencies <br>
+	Rails 5.2.1 <br>
+	Postgres db <br>
+	Solidus <br>
 	Solidus auth devise
 
 
