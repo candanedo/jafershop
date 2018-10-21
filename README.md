@@ -5,25 +5,30 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version 2.5.1
+* Ruby version <br>
+	2.5.1
 
 * System dependencies <br>
+	<br>
 	Rails 5.2.1 <br>
 	Postgres db <br>
 	Solidus <br>
 	Solidus auth devise
 
 
-* Configuration
-	Clone repository, install all dependencies with bundle install.
+* Configuration <br>
+	<br>
+	Clone repository <br>
+	Install all dependencies with bundle install.
 
-* Database creation
+* Database creation <br>
+	<br>
 	rake db:create
 
-* Database initialization
+* Database initialization <br>
+	<br>
 	rake db:migrate
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+* Services (job queues, cache servers, search engines, etc.) <br>
+	<br>
 	Job Queues for emails (Sidekiq and Redis)
