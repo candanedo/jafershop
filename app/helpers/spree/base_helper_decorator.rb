@@ -1,4 +1,4 @@
-module Spree::BaseHelper
+ module Spree::BaseHelper
   def layout_partial
     if controller.devise_controller?
       'spree/base/devise'
