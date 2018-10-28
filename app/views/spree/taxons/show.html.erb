@@ -1,13 +1,7 @@
 <h1 class="taxon-title"><%= @taxon.name %></h1>
 
-<% content_for :sidebar do %>
-  <div data-hook="taxon_sidebar_navigation" class="row col-md-2">
-    <%= render partial: 'spree/shared/taxonomies' %>
-    <%= render partial: 'spree/shared/filters' if @taxon.children.empty? %>
-  </div>
-<% end %>
 
-<div data-hook="taxon_products" class="row col-md-10">
+<div data-hook="taxon_products" class="row col-md-12">
   <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>
 </div>
 
