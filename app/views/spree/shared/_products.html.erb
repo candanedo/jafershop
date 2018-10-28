@@ -31,13 +31,16 @@
             <div class="product-image">
               <%= link_to(render('spree/shared/image', image: product.images.first, size: :small, itemprop: "image"), url, itemprop: 'url') %>
             </div>
+
             <div class="caption">
-              <h3>
+              <h4 align="center">
+                <hr>
                 <%= link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name %>
-              </h3>
+                <hr>
+              </h4>
               <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                 <% if price = product.price_for(current_pricing_options) %>
-                  <p>
+                  <p align="center">
                     <%= link_to url, class: "btn btn-primary" do%>
                       <span class="price selling" itemprop="price" content="<%= price.to_d %>">
                         <%= price.to_html %>
