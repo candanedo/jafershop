@@ -32,6 +32,9 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# gem wicked pdf and binary gem to import orders to pdf
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 gem 'solidus'
 gem 'solidus_auth_devise'
