@@ -17,6 +17,7 @@
           <%= link_to t('spree.my_account'), spree.account_path, class: "button btn btn-primary btn-block" %>
         <% end %>
       <% end %>
+      <%= link_to "Export to PDF", spree.order_path(format: "pdf"), class: "button btn btn-primary btn-block" %>
     </p>
   </div>
 </fieldset>
