@@ -36,6 +36,9 @@
         <li>
           <%= link_to t('spree.my_account'), spree.account_path %>
         </li>
+        <li>
+          <%= link_to t('spree.log_out'), spree.destroy_spree_user_session_path %>
+        </li>
         <li id="link-to-cart" data-hook>
           <noscript>
             <%= link_to t('spree.cart'), spree.cart_path %>
