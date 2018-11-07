@@ -431,6 +431,24 @@ ActiveRecord::Schema.define(version: 2018_11_07_172212) do
     t.index ["variant_id", "currency"], name: "index_spree_prices_on_variant_id_and_currency"
   end
 
+  create_table "spree_product_imports", id: :serial, force: :cascade do |t|
+    t.string "data_file_file_name"
+    t.string "data_file_content_type"
+    t.integer "data_file_file_size"
+    t.datetime "data_file_updated_at"
+    t.string "state"
+    t.text "product_ids"
+    t.datetime "completed_at"
+    t.datetime "failed_at"
+    t.text "error_message"
+    t.integer "created_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string "separatorChar"
+    t.string "encoding_csv"
+    t.string "quoteChar"
+  end
+
   create_table "spree_product_option_types", id: :serial, force: :cascade do |t|
     t.integer "position"
     t.integer "product_id"
