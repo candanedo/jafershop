@@ -39,7 +39,11 @@ gem 'wkhtmltopdf-binary'
 gem 'solidus'
 gem 'solidus_auth_devise'
 
+# Bootstrap SASS for twitter bootstrap styling
 gem 'bootstrap-sass'
+
+# Payment processing with Stripe
+gem "solidus_stripe",  git: 'https://github.com/solidusio-contrib/solidus_stripe'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
