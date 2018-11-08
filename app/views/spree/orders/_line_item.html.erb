@@ -3,7 +3,7 @@
   <tr class="<%= cycle('', 'alt') %> line-item">
     <td class="cart-item-image" data-hook="cart_item_image">
       <%= link_to(render('spree/shared/image',
-                         image: (variant.images.first || variant.product.gallery.images.first),
+                         image: (variant.images.first || variant.product.images.first),
                          size: :small), variant.product) %>
     </td>
     <td class="cart-item-description" data-hook="cart_item_description">
