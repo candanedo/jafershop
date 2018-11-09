@@ -2,6 +2,7 @@
   "name": "jafershop",
   "description": "app.json file for Heroku review apps",
   "scripts": {
+     "postdeploy": "rake db:migrate && rake db:seed spree_sample:load"
   },
   "env": {
     "LANG": {
