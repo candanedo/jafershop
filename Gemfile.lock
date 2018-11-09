@@ -9,6 +9,16 @@ GIT
       solidus_support
 
 GIT
+  remote: https://github.com/jtapia/better_solidus_paypal_express.git
+  revision: fd5aca766f57b0ef9d89cebb835d1c4d5a69d5da
+  specs:
+    solidus_paypal_express (2.0.0.beta)
+      deface (~> 1.0)
+      paypal-sdk-merchant
+      solidus_core (> 1.2, < 3)
+      solidus_support
+
+GIT
   remote: https://github.com/solidusio-contrib/solidus_stripe
   revision: d04d4b6a8b3cafe69152e5aa8878403f529a6e01
   specs:
@@ -205,6 +215,11 @@ GEM
       terrapin (~> 0.6.0)
     paranoia (2.4.1)
       activerecord (>= 4.0, < 5.3)
+    paypal-sdk-core (0.3.4)
+      multi_json (~> 1.0)
+      xml-simple
+    paypal-sdk-merchant (1.117.2)
+      paypal-sdk-core (~> 0.3.0)
     pg (1.1.3)
     polyglot (0.3.5)
     pry (0.11.3)
@@ -376,6 +391,7 @@ GEM
     websocket-extensions (0.1.3)
     wicked_pdf (1.1.0)
     wkhtmltopdf-binary (0.12.4)
+    xml-simple (1.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
 
@@ -401,6 +417,7 @@ DEPENDENCIES
   solidus
   solidus_auth_devise
   solidus_import_products!
+  solidus_paypal_express!
   solidus_stripe!
   spring
   spring-watcher-listen (~> 2.0.0)

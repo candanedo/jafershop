@@ -45,6 +45,9 @@ gem 'bootstrap-sass'
 # Payment processing with Stripe
 gem "solidus_stripe",  git: 'https://github.com/solidusio-contrib/solidus_stripe'
 
+# Payment processor with Paypal Tapia´s Gem
+gem 'solidus_paypal_express', github: 'jtapia/better_solidus_paypal_express'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
