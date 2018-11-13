@@ -1,8 +1,8 @@
 {
   "name": "jafershop",
-  "description": "app.json file for Heroku review apps",
+  "description": "An ecommerce that sells cosmetics and beauty products",
   "scripts": {
-     "postdeploy": "rake db:migrate && rake db:seed && bundle exec rake spree_sample:load"
+     "postdeploy": "bundle exec rake db:schema:load g&& bundle exec db:seed"
   },
   "env": {
     "LANG": {
