@@ -42,6 +42,9 @@ gem 'solidus_auth_devise'
 # Bootstrap SASS for twitter bootstrap styling
 gem 'bootstrap-sass'
 
+# Payment processor for Credit Cards in Mexico and also for Cash payments with OXXO
+gem 'spree_conekta', github: 'conekta/spree_conekta', branch: '3-0-stable'
+
 # Payment processing with Stripe
 gem "solidus_stripe",  git: 'https://github.com/solidusio-contrib/solidus_stripe'
 
