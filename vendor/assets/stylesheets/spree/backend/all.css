@@ -7,4 +7,6 @@
  *= require_self
  *= require_tree .
  *= require spree/backend/solidus_paypal_express
+
+ *= require spree/backend/solidus_conekta
 */

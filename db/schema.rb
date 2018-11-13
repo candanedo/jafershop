@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_08_222043) do
+ActiveRecord::Schema.define(version: 2018_11_13_194046) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -149,6 +149,18 @@ ActiveRecord::Schema.define(version: 2018_11_08_222043) do
     t.index ["stock_location_id"], name: "index_spree_cartons_on_stock_location_id"
   end
 
+  create_table "spree_conekta_payments", id: :serial, force: :cascade do |t|
+    t.string "payment_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "payment_method_id"
+    t.integer "user_id"
+    t.index ["payment_method_id"], name: "index_spree_conekta_payments_on_payment_method_id"
+    t.index ["user_id"], name: "index_spree_conekta_payments_on_user_id"
+  end
+
   create_table "spree_countries", id: :serial, force: :cascade do |t|
     t.string "iso_name"
     t.string "iso"
@@ -175,6 +187,7 @@ ActiveRecord::Schema.define(version: 2018_11_08_222043) do
     t.integer "payment_method_id"
     t.boolean "default", default: false, null: false
     t.integer "address_id"
+    t.integer "installments_number"
     t.index ["payment_method_id"], name: "index_spree_credit_cards_on_payment_method_id"
     t.index ["user_id"], name: "index_spree_credit_cards_on_user_id"
   end
