@@ -2,7 +2,7 @@
   "name": "jafershop",
   "description": "An ecommerce that sells cosmetics and beauty products",
   "scripts": {
-     "postdeploy": "bundle exec rake db:schema:load && bundle exec db:seed"
+     "postdeploy": "heroku run rake db:migrate && heroku run rake db:seed"
   },
   "env": {
     "LANG": {
