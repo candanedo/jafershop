@@ -10,4 +10,3 @@
 //= require_tree .
 //= require spree/frontend/solidus_paypal_express
 
-//= require spree/frontend/solidus_conekta
