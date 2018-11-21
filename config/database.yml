@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: jafershop_production
-  username: jafershop
-  password: <%= ENV['JAFERSHOP_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
