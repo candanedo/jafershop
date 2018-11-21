@@ -54,6 +54,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Import CSV files to products db
 gem 'solidus_import_products', :git => 'git://github.com/2BeDigital/solidus_import_products.git'
 
+# Amazon Web Services Gem to store images in AWS instead of paperclip local
+gem 'aws-sdk', '~> 2.3'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
