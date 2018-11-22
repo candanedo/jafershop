@@ -9,9 +9,13 @@ $pink-jafer: #C070C0
   background-color: $pink-jafer
   border-color: $pink-jafer
 
-.btn-info:active:focus
-  background-color: $purple-jafer
-  border-color: $purple-jafer
+.btn-info:focus, .btn-info.focus
+  background-color: $purple-jafer !important
+  border-color: $purple-jafer !important
+
+.btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle
+  background-color: $purple-jafer !important
+  border-color: $purple-jafer !important
 
 .btn-primary
   background-color: $pink-jafer
@@ -23,3 +27,9 @@ $pink-jafer: #C070C0
 
 .btn-outline-secondary
   color: white
+
+.btn-link
+  color: $purple-jafer
+
+.btn-link:hover
+  color: $pink-jafer
