@@ -1,13 +1,8 @@
-<!-- <header id="header" class="row" data-hook>
-  <figure id="logo" class="columns six" data-hook><%= logo %></figure>
-  <%#= render partial: 'spree/shared/nav_bar' %>
-  <%#= render partial: 'spree/shared/main_nav_bar' if store_menu? %>
-</header>
- -->
- <nav id="navb-main" class="navbar navbar-default navbar-static-top fixed">
+<nav id="navb-main" class="navbar navbar-default navbar-static-top fixed">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header col-md-6">
+    <div class="col-md-6">
+    <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -16,7 +11,7 @@
       </button>
       <figure id="logo" class="columns six" data-hook><%= logo img_options: {class: "img-responsive", width: '60'} %></figure>
     </div>
-
+    </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class='nav navbar-nav navbar-left'>
@@ -30,37 +25,34 @@
       <ul class='nav navbar-nav navbar-right'>
         <li>
           <%= link_to image_tag("account.png", :alt => "Account logo", :class => "accont_avatar"), spree.account_path %>
-            <script>Spree.fetch_cart('<%= j spree.cart_link_path %>')</script>
         </li>
         <li>
           <%= link_to image_tag("shop_bag.png", :alt => "Account logo", :class => "shop_bag_img"), spree.cart_path %>
+            <script>Spree.fetch_cart('<%= j spree.cart_link_path %>')</script>
         </li>
-        <!-- <li> -->
-          <%#= link_to t('spree.log_out'), spree.destroy_spree_user_session_path %>
-        <!-- </li> -->
-      <!--   <li id="link-to-cart" data-hook>
-          <noscript>
-            <%#= link_to t('spree.cart'), spree.cart_path %>
-          </noscript>
-          <script>Spree.fetch_cart('<%= j spree.cart_link_path %>')</script>
-          &nbsp;
-        </li> -->
       </ul>
-      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 <nav id="nav-bar-sec" class="navbar navbar-default navbar-static-top">
   <div class="container">
-    <ul id="nav-dropd" class="nav navbar-nav col-md-12">
-        <% @taxonomies.each do |taxonomy| %>
-          <li class="dropdown">
-            <%= link_to '#', data: { toggle: "dropdown" }, "aria-haspopup" => 'true' do %>
-              <%= taxonomy.name %><span class='caret'></span>
-            <% end %>
-            <%= nav_tree(taxonomy.root, @taxon, 1)%>
-          </li>
-        <% end %>
-      </ul>
+    <ul id="nav-dropd" class="nav navbar-nav navbar-left">
+      <% @taxonomies.each do |taxonomy| %>
+        <li class="dropdown">
+          <%= link_to '#', data: { toggle: "dropdown" }, "aria-haspopup" => 'true' do %>
+            <%= taxonomy.name %><span class='caret'></span>
+          <% end %>
+          <%= nav_tree(taxonomy.root, @taxon, 1)%>
+        </li>
+      <% end %>
+    </ul>
+    
+    <ul id="nav-dropd" class="nav navbar-nav navbar-right">
+      <% if spree_user_signed_in? %>
+        <li>
+          <%= link_to "Log Out", spree.destroy_spree_user_session_path %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </nav>
