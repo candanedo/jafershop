@@ -21,10 +21,10 @@
           <hr>
           <div class="links columns sixteen alpha omega from-group" data-hook="cart_buttons">
             <%= order_form.text_field :coupon_code, size: 10, placeholder: t('spree.coupon_code'), class: 'form-control' %>
-            <%= button_tag class: 'primary btn btn-success', id: 'update-button' do %>
+            <%= button_tag class: 'primary btn btn-primary', id: 'update-button' do %>
               <%= t('spree.update') %>
             <% end %>
-            <%= button_tag class: 'button checkout primary btn btn-primary', id: 'checkout-link', name: 'checkout' do %>
+            <%= button_tag class: 'button checkout primary btn btn-info', id: 'checkout-link', name: 'checkout' do %>
               <%= t('spree.checkout') %>
             <% end %>
           </div>
