@@ -28,7 +28,5 @@ Things you may want to cover:
 * Database initialization <br>
 	<br>
 	rake db:migrate
-
-* Services (job queues, cache servers, search engines, etc.) <br>
-	<br>
-	Job Queues for emails (Sidekiq and Redis)
+	rake db:seed
+	rake spree_sample:load
