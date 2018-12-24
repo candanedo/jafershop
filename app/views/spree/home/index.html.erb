@@ -1,5 +1,8 @@
-<div data-hook="homepage_products">
-  <% cache(cache_key_for_products) do %>
-    <%= render partial: 'spree/shared/products', locals: { products: @products } %>
-  <% end %>
-</div>
+<% categories.each do |category|%>
+  <h3 class="category-name-at-homepage"><%= link_to category.name, seo_url(category), class: 'link-categories' %></h3>
+  <div data-hook="homepage_products">
+    <% cache(cache_key_for_products) do %>
+      <%= render partial: 'spree/shared/products', locals: { products: category.products.limit(3) } %>
+    <% end %>
+  </div>
+<% end %>
